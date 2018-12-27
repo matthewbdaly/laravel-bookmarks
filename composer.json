@@ -1,6 +1,6 @@
 {
-    "name": "matthewbdaly/laravel-package-boilerplate",
-    "description": "Starting boilerplate for Laravel packages. Override the content in here when creating your own package",
+    "name": "matthewbdaly/laravel-bookmarks",
+    "description": "Allows for bookmarking objects",
     "type": "library",
     "keywords": ["laravel","lumen"],
     "require": {},
@@ -25,7 +25,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Package\\": "src/"
+            "Matthewbdaly\\LaravelBookmarks\\": "src/"
         }
     },
     "autoload-dev": {
@@ -51,7 +51,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Package\\Providers\\ServiceProvider"
+                "Matthewbdaly/LaravelBookmarks\\Providers\\ServiceProvider"
             ]
         }
     }

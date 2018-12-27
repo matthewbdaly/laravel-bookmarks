@@ -1,6 +1,6 @@
 <?php
 
-namespace Package\Providers;
+namespace Matthewbdaly\LaravelBookmarks\Providers;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
