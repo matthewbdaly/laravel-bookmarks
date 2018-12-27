@@ -25,6 +25,8 @@ class BookmarkTest extends TestCase
         $obj->save();
         $bookmark = Bookmark::first();
         $this->assertEquals($user->id, $bookmark->user_id);
-        $this->assertEquals($user, $bookmark->bookmarkable);
+        $this->assertEquals($user->id, $bookmark->bookmarkable->id);
+        $this->assertEquals($user->name, $bookmark->bookmarkable->name);
+        $this->assertEquals($user->email, $bookmark->bookmarkable->email);
     }
 }
