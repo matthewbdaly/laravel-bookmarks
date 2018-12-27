@@ -1,0 +1,58 @@
+{
+    "name": "matthewbdaly/laravel-package-boilerplate",
+    "description": "Starting boilerplate for Laravel packages. Override the content in here when creating your own package",
+    "type": "library",
+    "keywords": ["laravel","lumen"],
+    "require": {},
+    "require-dev": {
+        "matthewbdaly/artisan-standalone": "0.0.*",
+        "mockery/mockery": "~1.0",
+        "orchestra/testbench": "^3.7",
+        "orchestra/testbench-browser-kit": "^3.7",
+        "php-coveralls/php-coveralls": "^2.1",
+        "phpstan/phpstan": "^0.10.5",
+        "phpunit/phpunit": "^7.0",
+        "psy/psysh": "^0.9.8",
+        "sebastian/phpcpd": "^4.0",
+        "squizlabs/php_codesniffer": "^3.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthew Daly",
+            "email": "matthewbdaly@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Package\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "php -r \"mkdir('bootstrap');\"",
+            "php -r \"mkdir('bootstrap'.DIRECTORY_SEPARATOR.'cache');\"",
+            "php -r \"mkdir('src'.DIRECTORY_SEPARATOR.'Http');\"",
+            "php -r \"mkdir('src'.DIRECTORY_SEPARATOR.'Http'.DIRECTORY_SEPARATOR.'Controllers');\"",
+            "php -r \"mkdir('src'.DIRECTORY_SEPARATOR.'Http'.DIRECTORY_SEPARATOR.'Middleware');\"",
+            "php -r \"mkdir('routes');\""
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Package\\Providers\\ServiceProvider"
+            ]
+        }
+    }
+}
